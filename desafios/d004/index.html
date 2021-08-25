@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troca</title>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <input type="button" value="Comprar produto" onclick="comprar()">
+    <script>
+        function comprar()
+        {
+            var produto = window.prompt(`Que produto você está comprando?`)
+            var valor   = Number.parseFloat(window.prompt(`Quanto custa ${produto} que você está comprando?`)).toFixed(2)
+            var dinheiro = Number.parseFloat(window.prompt(`Qual foi o valor que você deu para pagar ${produto}?`)).toFixed(2)
+            if (dinheiro >= valor)
+            {
+                window.prompt(`Você comprou ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai receber RS ${(dinheiro-valor).toFixed(2)} de troco. \nVolte sempre!`)
+            }else
+            {
+                window.prompt(`Você quer ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai faltar RS ${((-1)*(dinheiro-valor)).toFixed(2)}. \nVolte sempre!`)
+            }
+
+
+        }
+    </script>
+</body>
+</html>
