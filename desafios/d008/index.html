@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <input type="button" value="Dessconto de 10%" onclick="descontar()">
+    <div  id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        function descontar()
+        {
+            var produto = window.prompt(`Qual é o produto que está comprando?`)
+            var preço   = Number.parseFloat(window.prompt(`Qual o preço de ${produto}?`)).toFixed(2)
+            var resultado = window.document.querySelector('div#resultado')
+            resultado.innerHTML = `<h2>Calculando desconto de 10% para ${produto}</h2>
+            <p>
+                o preço original era de R$ ${preço}.</br>
+                Você acaba de ganhar R$ ${(preço*0.1).toFixed(2)} de desconto (-10%).</br>
+                No fim, você vai pagar R$ ${(preço*0.9).toFixed(2)}, no produto ${produto}.
+            </p>`
+        }
+    </script>
+</body>
+</html>

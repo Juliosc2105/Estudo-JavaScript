@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salarial</title>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <input type="button" value="Reajuste Salário" onclick="reajuste()">
+    <div id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        function reajuste()
+        {
+            var nome = window.prompt(`Qual é o nome do funcionário?`)
+            var salário = Number.parseFloat(window.prompt(`Qual é o salário de ${nome}?`))
+            var reajuste = Number.parseFloat(window.prompt(`O salário de ${nome} vai ser ajustado em qual porcentagem?`))
+
+            var resultado = window.document.getElementById('resultado')
+            resultado.innerHTML = `<h2>${nome} recebeu um aumento salarial!!</h2>
+            <p>O salário atual era de R$ ${salário}.</p>
+            <p>Com um aumento de ${reajuste}%, o salário vai aumentar R$ ${(salário*reajuste/100).toFixed(2)} no próximo mês.</p>
+            <p>E a partir daí, ${nome} vai passar a ganhar ${((salário*reajuste/100)+salário).toFixed(2)}</p>`
+        }
+    </script>
+   
+</body>
+</html>
