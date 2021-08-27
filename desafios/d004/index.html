@@ -17,10 +17,10 @@
             var dinheiro = Number.parseFloat(window.prompt(`Qual foi o valor que você deu para pagar ${produto}?`)).toFixed(2)
             if (dinheiro >= valor)
             {
-                window.prompt(`Você comprou ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai receber RS ${(dinheiro-valor).toFixed(2)} de troco. \nVolte sempre!`)
+                window.alert(`Você comprou ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai receber RS ${(dinheiro-valor).toFixed(2)} de troco. \nVolte sempre!`)
             }else
             {
-                window.prompt(`Você quer ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai faltar RS ${((-1)*(dinheiro-valor)).toFixed(2)}. \nVolte sempre!`)
+                window.alert(`Você quer ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai faltar RS ${((-1)*(dinheiro-valor)).toFixed(2)}. \nVolte sempre!`)
             }
 
 

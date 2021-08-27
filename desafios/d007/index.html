@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+</head>
+<body>
+    <h1>Conversor R$ &#8594 US$</h1>
+    <input type="button" value="converter" onclick="converter()">
+    <div id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        var cot = window.prompt(`Antes de mais nada. Quanto está a cotação do dólar agora?`)
+
+        function converter()
+        {
+            var reais = Number.parseFloat(window.prompt(`Quantos R$ você tem na carteira?`))
+            var reesultado = window.document.querySelector('div#resultado')
+            reesultado.innerHTML = `<h2>Com R$${(reais).toFixed(2)}, é possível comprar:</h2> 
+            <p>US$${(reais/cot).toFixed(2)}!</p>`
+        }
+    </script>
+</body>
+</html>
