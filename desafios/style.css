@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+body
+{
+    background-color: rgb(24, 71, 110);
+    font: normal 15pt arial;
+}
+
+header
+{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.342);
+}
+
+section
+{
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    padding: 15px;
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.342);
+}
+
+.botao
+{
+    margin: 0px 10px;
+    height: 100px;
+    width: 100px;
+}
+
+footer
+{
+    color: white;
+    font-style: italic;
+    font-size: 10pt;
+    text-align: center;
+}
+
+h2
+{
+    text-align: center;
+    font-size: 15pt;
+}
+
+p
+{
+    text-align: center;
+    line-height: 1.5;
+}
+
+

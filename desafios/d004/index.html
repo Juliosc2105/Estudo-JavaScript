@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Calcula Troca</title>
 </head>
 <body>
-    <h1>Calculando o Troco</h1>
-    <input type="button" value="Comprar produto" onclick="comprar()">
+    <header>
+        <h1>Calculando o Troco</h1>
+    </header>
+
+    <section>
+        <input class="botao" style="margin: 0px 190px; width: 120px;" type="button" value="Comprar produto" onclick="comprar()">
+    </section>
+
+    <footer>
+        <p>&copy; Julio Cardoso | 2021</p>
+    </footer>
+
     <script>
         function comprar()
         {
@@ -22,8 +33,6 @@
             {
                 window.alert(`Você quer ${produto} que custa RS ${valor}. \nDeu RS ${dinheiro} em dinheiro e vai faltar RS ${((-1)*(dinheiro-valor)).toFixed(2)}. \nVolte sempre!`)
             }
-
-
         }
     </script>
 </body>

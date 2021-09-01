@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Conversor R$ -> US$</title>
 </head>
 <body>
-    <h1>Conversor R$ &#8594 US$</h1>
-    <input type="button" value="converter" onclick="converter()">
-    <div id="resultado">
-        <p>Clique no botão acima para iniciar.</p>
-    </div>
+    <header>
+        <h1>Conversor R$ &#8594 US$</h1>
+    </header>
+
+    <section>
+        <input class="botao" style="margin: 0px 200px;" type="button" value="converter" onclick="converter()">
+        <div id="resultado">
+            <p>Clique no botão acima para iniciar.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Julio Cardoso | 2021</p>
+    </footer>
 
     <script>
         var cot = window.prompt(`Antes de mais nada. Quanto está a cotação do dólar agora?`)

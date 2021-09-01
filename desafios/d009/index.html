@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Reajuste Salarial</title>
 </head>
 <body>
-    <h1>Reajuste Salarial</h1>
-    <input type="button" value="Reajuste Salário" onclick="reajuste()">
-    <div id="resultado">
-        <p>Clique no botão acima para iniciar.</p>
-    </div>
+    <header>
+        <h1>Reajuste Salarial</h1>
+    </header>
+
+    <section>
+        <input class="botao" style="width: 150px; margin: 0px 175px;" type="button" value="Reajuste Salário" onclick="reajuste()">
+        <div id="resultado">
+            <p>Clique no botão acima para iniciar.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Julio Cardoso | 2021</p>
+    </footer>
 
     <script>
         function reajuste()
@@ -24,7 +34,7 @@
             resultado.innerHTML = `<h2>${nome} recebeu um aumento salarial!!</h2>
             <p>O salário atual era de R$ ${salário}.</p>
             <p>Com um aumento de ${reajuste}%, o salário vai aumentar R$ ${(salário*reajuste/100).toFixed(2)} no próximo mês.</p>
-            <p>E a partir daí, ${nome} vai passar a ganhar ${((salário*reajuste/100)+salário).toFixed(2)}</p>`
+            <p>E a partir daí, ${nome} vai passar a ganhar R$ ${((salário*reajuste/100)+salário).toFixed(2)}</p>`
         }
     </script>
    

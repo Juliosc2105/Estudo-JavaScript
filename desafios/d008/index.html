@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Cálculo de Desconto</title>
 </head>
 <body>
-    <h1>Calcular Desconto</h1>
-    <input type="button" value="Dessconto de 10%" onclick="descontar()">
-    <div  id="resultado">
-        <p>Clique no botão acima para iniciar.</p>
-    </div>
+    <header>
+        <h1>Calcular Desconto</h1>
+    </header>
+
+    <section>
+        <input class="botao" style="width: 150px; margin: 0px 175px;" type="button" value="Dessconto de 10%" onclick="descontar()">
+        <div  id="resultado">
+            <p>Clique no botão acima para iniciar.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; Julio Cardoso | 2021</p>
+    </footer>
 
     <script>
         function descontar()
@@ -21,7 +31,7 @@
             var resultado = window.document.querySelector('div#resultado')
             resultado.innerHTML = `<h2>Calculando desconto de 10% para ${produto}</h2>
             <p>
-                o preço original era de R$ ${preço}.</br>
+                O preço original era de R$ ${preço}.</br>
                 Você acaba de ganhar R$ ${(preço*0.1).toFixed(2)} de desconto (-10%).</br>
                 No fim, você vai pagar R$ ${(preço*0.9).toFixed(2)}, no produto ${produto}.
             </p>`

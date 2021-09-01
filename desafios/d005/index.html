@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Conversor de Medidas</title>
 </head>
 <body>
-    <h1>Conversor de Medidas</h1>
-    <input type="button" value="Converter" onclick="converter()">
-    <p>Clique no botão acima para iniciar.</p>
-    <div id="resultado"></div>
+    <header>
+        <h1>Conversor de Medidas</h1>
+    </header>
+
+    <section>
+        <input class="botao" style="margin: 0px 200px;" type="button" value="Converter" onclick="converter()">
+        <p>Clique no botão acima para iniciar.</p>
+        <div id="resultado"></div>
+    </section>
 
     <script>
         function converter()
@@ -18,7 +24,7 @@
             var metros = Number.parseFloat(window.prompt(`Digirte a distância em metros (m)`))
 
             var resultado = window.document.querySelector('div#resultado')
-            resultado.innerHTML = `<h2>A distãncia de ${metros} metros, corresponde a...</h2>
+            resultado.innerHTML = `<h2>A distância de ${metros} metros, corresponde a...</h2>
                 <p>${metros/1000} quilômetros (Km)</p>
                 <p>${metros/100} hectômetro (HM)</p>
                 <p>${metros/10} decâmetro (Dam)</p>
@@ -27,5 +33,10 @@
                 <p>${metros*1000} milímetros (mm)</p> `
         }
     </script>
+
+<footer>
+    <p>&copy; Julio Cardoso | 2021</p>
+</footer>
+
 </body>
 </html>
